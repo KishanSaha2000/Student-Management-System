@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+   <div class = "container">
+        <!-- Sidebar -->
+        <div class = "Sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li class = "active">Dashboard</li>
+                <li>Class</li>
+                <li>Students</li>
+                <li>Notice</li>
+                <li>Public Notice</li>
+                <li>Report</li>
+                <li>Search</li>
+            </ul>
+        </div>
+    
+        <!-- main content -->
+        <main class="main-content">
+                <header>
+                    <h2 id="section-title">Dashboard</h2>
+                    <span>Updated Report</span>
+                </header>
+
+                <!-- dashboard section -->
+                <div id="dashboard-section">
+                    <div class="cards">
+                        <div class="card blue">
+                            <h3>Total Classes</h3>
+                            <p><span id="total-class">0</span></p>
+                            <small>View Classes</small>
+                        </div>
+
+                        <div class="card orange">
+                            <h3>Total Students</h3>
+                            <p><span id="total-student">0</span></p>
+                            <small>View Students</small>
+                        </div>
+
+                        <div class="card green">
+                            <h3>Class Notice</h3>
+                            <p><span id="total-notice">0</span></p>
+                            <small>View Notice</small>
+                        </div>
+
+                        <div class="card red">
+                            <h3>Total public Notice</h3>
+                            <p><span id="total-public">0</span></p>
+                            <small>View Public Notice</small>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>My Daily Activities</h3>
+                        <canvas id="dashboard-chart" height="150"></canvas>
+                    </div>    
+                </div>
+
+                <!-- class section -->
+                <section id="class-section" class="section hidden">
+                    <h3>Manage Classes</h3>
+                    <form id="class-form">
+                        <input type="text" id="class-name" placeholder="class Name" required>
+                        <input type="hidden" id="class-index" />
+                        <button type="submit">Add Class</button>
+                    </form>
+                    <input type="text" id="class-search" placeholder="Search Classess..." />
+                    <ul id="class-list"></ul>
+                </section>
+
+                 <!-- Student section -->
+                <section id="student-section" class="section hidden">
+                    <h3>Manage Students</h3>
+                    <form id="student-form">
+                        <input type="text" id="student-name" placeholder="Student Name" required/>
+                        <input type="text" id="student-father" placeholder="Father Name" required/>
+                        <select id="student-gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">male</option>
+                            <option value="female">female</option>
+                        </select>
+                        <input type="text" id="student-class" placeholder="Class" required/>
+                        <input type="text" id="student-grade" placeholder="Grade" required/>
+                        <input type="text" id="student-roll" placeholder="Roll No" required/>
+                        <input type="text" id="student-section-field" placeholder="Section" required/>
+                        <input type="hidden" id="student-index" />
+                        <button type="submit">Add Student</button>
+                    </form>
+                    <input type="text" id="student-search" placeholder="Search Students..." />
+                    <div class="table-wrapper">
+                        <table id="student-list">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Father Name</th>
+                                    <th>Gender</th>
+                                    <th>Class</th>
+                                    <th>Grade</th>
+                                    <th>Roll No</th>
+                                    <th>Section</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Dynamic rows insert here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Notice Section -->
+                <section id="notice-section" class="section hidden">
+                    <h3>Class Notices</h3>
+                    <form id="notice-form">
+                        <input type="text" id="notice-text" placeholder="Class Notice" required/>
+                        <input type="hidden" id="notice-index" />
+                        <button type="submit">Add Notice</button>
+                    </form>
+                    <input type="text" id="notice-search" placeholder="Search notices..."/>
+                    <ul id="notice-list"></ul>
+                </section>
+
+                <!-- Public Notice Section -->
+                <section id="public-section" class="section hidden">
+                    <h3>Public Notices</h3>
+                    <form id="public-form">
+                        <input type="text" id="public-text" placeholder="Public Notice" required />
+                        <input type="hidden" id="public-index" />
+                        <button type="submit">Add Public Notice</button>
+                    </form>
+                    <input type="text" id="public-search" placeholder="Search public notices..." />
+                    <ul id="public-list"></ul>
+                </section>
+
+                <!-- Report Section -->
+                <section id="report-section" class="section hidden">
+                    <h3>Report Summary</h3>
+                    <p>Total Classes: <span id="report-class">0</span></p>
+                    <p>Total Students: <span id="report-student">0</span></p>
+                    <p>Total Notices: <span id="report-notice">0</span></p>
+                    <p>Total Public Notices: <span id="report-public">0</span></p>
+                </section>
+
+                <!-- Global Search Section -->
+                <section id="search-section" class="section hidden">
+                    <h3>Global Search</h3>
+                    <input type="text" id="global-search" placeholder="Search across all data..." />
+                    <ul id="global-results"></ul>
+                </section>
+            </main>
+    </div>
+
+    <!-- Chart.js CDN -->
+    <script src="https://jsdelivr.net"></script>
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
