@@ -28,3 +28,5 @@ A simple, browser-based Student Management System built with vanilla HTML, CSS, 
 - script.js — JavaScript logic (handles classes, students, notices, dashboard, and search)
 - LICENSE — MIT License file
 - README.md — Project documentation
+- <img width="1420" height="692" alt="image" src="[https://github.com/user-attachments/assets/9c17b554-5173-4d47-8781-d0b1bc982146](https://github.com/KishanSaha2000/Student-Management-System.git)" />
+
