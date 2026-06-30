@@ -35,7 +35,7 @@ A simple, browser-based Student Management System built with vanilla HTML, CSS, 
 
 1. Clone or download this repository.
    ```bash
-   git clone https://github.com/KishanSaha2000/Student-Management-System.git
+   https://github.com/KishanSaha2000/Student-Management-System.git
    ```
 2. Open `index.html` directly in your browser — no server or installation required.
 
