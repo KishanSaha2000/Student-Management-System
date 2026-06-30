@@ -23,10 +23,37 @@ A simple, browser-based Student Management System built with vanilla HTML, CSS, 
 - **localStorage** – Client-side data persistence
 
 ## Project Structure
-- index.html — Main HTML file
-- style.css — Styling for the project
-- script.js — JavaScript logic (handles classes, students, notices, dashboard, and search)
-- LICENSE — MIT License file
-- README.md — Project documentation
-- <img width="1420" height="692" alt="image" src="[https://github.com/user-attachments/assets/9c17b554-5173-4d47-8781-d0b1bc982146](https://github.com/KishanSaha2000/Student-Management-System.git)" />
 
+```
+├── index.html      # Main HTML file
+├── style.css       # Styling
+├── script.js       # App logic (CRUD operations, search, dashboard, chart)
+└── README.md
+```
+
+## Getting Started
+
+1. Clone or download this repository.
+   ```bash
+   git clone https://github.com/<your-username>/<repo-name>.git](https://github.com/KishanSaha2000/Student-Management-System.git
+   ```
+2. Open `index.html` directly in your browser — no server or installation required.
+
+> **Note:** Since data is stored in `localStorage`, it is specific to the browser/device you use and will persist only on that browser unless cleared.
+
+## Usage
+
+- Use the sidebar to navigate between Dashboard, Class, Students, Notice, Public Notice, Report, and Search sections.
+- Fill out the form in each section to add a new entry. Click **Edit** on any list/table item to update it, or **Delete** to remove it.
+- Use the search bar within each section to filter results, or use the **Search** tab for a global search across all data.
+
+## Future Improvements
+
+- Add user authentication
+- Migrate from `localStorage` to a backend database (e.g., Firebase, MongoDB)
+- Export reports as PDF/Excel
+- Add pagination for large student lists
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
